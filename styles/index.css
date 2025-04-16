@@ -1,22 +1,47 @@
-body{
-    margin: 0;
-    display: flex;
-    width: 100vw;
+body {  
+    margin: 0;  
+    display: flex;  
+    overflow-x: hidden; 
+}  
 
-}
-.header{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    justify-content: space-around;
+.container {  
+    width: 100%; 
+}  
 
-}
-.header > div{
-    color: white;
-    width: 30%;
-}
-.header > div > a{
-    color:black;
-    font-weight: bold;
+.header {  
+    display: flex;  
+    flex-direction: column;  
+    width: 100%; 
+    justify-content: space-around;  
+    overflow: hidden;  
+    background: #e7e3e3;   
+}  
 
+.header > div {  
+    color: white;  
+    width: 30%;  
+    max-width: 100%; 
 }
+
+.header > div > a {  
+    color: black;  
+    font-weight: bold;  
+    padding: 10px;  
+    text-decoration: none;  
+    display: block;   
+    transition: background 0.3s, color 0.3s; 
+}  
+
+.header > div > a:hover {  
+    background: rgba(255, 0, 0, 0.2);   
+    color: red; 
+}  
+
+@media screen and (min-width: 768px) {  
+    .header {  
+        flex-direction: row; 
+        justify-content: center; 
+          
+        gap: 2px; 
+        font-size: 20px; 
+    }}
